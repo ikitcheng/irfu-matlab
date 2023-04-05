@@ -270,11 +270,11 @@ if printTitle
 end
 
 %% Output definition
-
+%disp(num2str(nargout))
 if nargout >= 1
   varargout{1} = h;
 end
-if nargout == 2
+if nargout == 3
   if plotPSDvsV
     varargout{2}=f;
     varargout{3}=vtot/unitsVelocity;
@@ -285,7 +285,7 @@ if nargout == 2
     varargout{2}=F_reduced;
     varargout{3}=vz_reduced/unitsVelocity;
   end
-elseif nargout ==3
+elseif nargout == 4
   varargout{2}=f;
   varargout{3}=vp/unitsVelocity;
   varargout{4}=vz/unitsVelocity;
